@@ -1,23 +1,10 @@
 body{
-    background-color: #324BD9;
-}
-.divFlex{
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-}
-.h1{
-    color: #324BD9;
-    background-color: #F2F2F2;
-    width: 100%;
-    padding: 5%;
-    border-radius: 5px;
+    
 }
 button{
     background-color: transparent;
     outline: none;
-    border: 1px solid #F2F2F2;
-    color: #F2F2F2;
+    border: none;
     font-size: 1rem;
     border-radius: 10px;
     font-weight: 900;
@@ -29,24 +16,34 @@ button{
     gap: 5%;
     justify-content: center;
 }
-.time{
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: #F2F2F2;
-}
-.clock{
-    width: 90%;
+
+.ClockCounter{
+    width: 200px;
     margin: auto;
     text-align: center;
     display: flex;
     flex-direction: column;
-    background-color: #5C6273;
-    padding: 2%;
+    background-color: lightslategray;
     margin-top: 2%;
-    gap: 4%;
-    box-shadow: 0px 0px 1px #cccc,0px 1px 1px  #cccc;
-    
+    margin-bottom: 2%;
+    box-shadow: 1px 1px 1px 1px #cccc,-1px 2px 2px  2px#cccc;
+    border-radius: 500px;
 }
-.clock .h1{
-    width: 90%;
+#timer-label,.timer-label{
+    color: #F2F2F2;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+}
+.session{
+    padding: 4%;
+    border: 1px solid #F2F2F2;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px #aaa, 0px 1px 1px #ccc, 1px 1px 1px #ccc;
+}
+#break-label, #session-label{
+    color: lightslategray;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.bi{
+    font-size: 2rem;
 }

@@ -49,7 +49,7 @@ export const Timer = () => {
         beep.play();
         setPlaying(true);
         setTimeSpent(0);
-        setMode((mode) => (mode == "session" ? "break" : "session"));
+        setMode((mode) => (mode == "session" ? "session"  : "break"));
         setTimeLess(
             mode == "session" ? sessionLength * 1000 : breakLength * 1000
         );
@@ -68,6 +68,7 @@ export const Timer = () => {
       setBreakLength(5*60);
       setSessionLength(25*60)
       setTimeLess(mode=="session"? sessionLength*1000: breakLength*1000)
+      setMode("session")
 
       if(isActive){
           setIsActive(false);
@@ -89,7 +90,7 @@ export const Timer = () => {
       
   return (
     <div>
-        <div>
+        <div className='containerButton'>
             <Break
             length={breakLength}
             decre={decrementB}
@@ -98,16 +99,17 @@ export const Timer = () => {
             length={sessionLength}
             decre={decrementS}
             incre={incrementS}/>
-            <ClockCounter time={timeLess} mode={mode}/>
+           
         </div>
+         <ClockCounter time={timeLess} mode={mode}/>
         <div className='containerButton'>
             <button onClick={timeActive}  id="start_stop" >
                <i className="bi bi-play-circle"></i>
             </button>
-            <button onClick={timeStop} >
+            <button onClick={timeStop} id="time-left" >
                 <i className="bi bi-pause-btn"></i>
             </button >
-            <button onClick={reset} >
+            <button onClick={reset}  id="reset" >
                 <i className="bi bi-arrow-clockwise"></i>
             </button>
         </div>
